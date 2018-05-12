@@ -1,0 +1,18 @@
+enable: true
+title: Our Services
+subtitle: ""
+content:
+  - icon: ion-earth
+    name: Geotechnical Monitoring
+    text: >
+      Real time fully automated monitoring system with web based data management.
+  - icon: ion-volume-high
+    name: Noise and Vibration Monitoring
+    text: >
+      Including attendant noise and vibration measuring.
+  - icon: ion-hammer
+    name: Material Testing
+    text: ""
+  - icon: ion-leaf
+    name: Environmental Engineering
+    text: ""

@@ -1,117 +1,86 @@
 baseurl = "https://frontop.github.io/"
 languageCode = "en-us"
 title = "Frontop Engineering"
-theme = "hugo-creative-theme"
-googleAnalytics = ""
+theme = "airspace-hugo"
 
+[menu]
+
+  [[menu.header]]
+    weight = 2
+    name = "Work"
+    url = "/work"
+  [[menu.header]]
+    weight = 4
+    name = "Contact"
+    url = "/contact"
+
+  [[menu.footer]]
+    weight = 1
+    name = "About us"
+    url = "#"
+  [[menu.footer]]
+    weight = 2
+    name = "Contact us"
+    url = "/contact"
+  [[menu.footer]]
+    weight = 3
+    name = "How it works"
+    url = "#"
+
+# The site's parameters
 [params]
 
-	# You can use Markdown syntax for urls [text](//url.to/source) for
-	# most longer texts.
+  # If you want to remove the copyright text you need a Themefisher license.
+  # This license is offered with a 50% discount for all Hugo users.
+  # For information see https://github.com/gohugoio/hugoThemes/issues/260
 
-	# All icons using Fontawesome's icon font. Look at http://fontawesome.io/icons/
-	# for more icons. The icons are represented by their corresponding
-	# CSS class.
+  date_format = "6 January 2006"
 
-	# All projects of the portfolio are defined in their own files.
-	# You can find example projects at 'exampleSite/data/projects'. Copy the 'projects'
-	# folder into the 'data' directory at the root of this Hugo site.
-	# For more information take a look at the README.
+  home = "Home"
 
-	# To provide some metadata for search engines feel free to add some
-	# information about you and your website.
-	name = "Frontop Engineering"
-	description = "Providing geotechnical engineering services in Ontario, Canada"
+  [params.slider]
+    enable = true
+    title = "Frontop Engineering"
+    subtitle = "Be in the front, to provide top service"
 
-	# The path must be relative to the static folder
-	favicon = "favicon.ico"
+  [params.wrapper]
+    enable = true
+    title = "About Us"
+    italic = "Established in 2005"
+    paragraph = "Frontop has been consistently providing top quality service for over a decade, and is now one of the top engineering consulting firms in Ontario. We focus on geotechnical instrumentation and monitoring, with over 50 employees including Professional Engineers, Instrumentation and Monitoring specialists, Software Engineers and Noise and Vibration experts."
 
+  [params.blog]
+    enable = false
+    title = "Get The Latest On What We're doing"
+    subtitle = "Catch up with us, anytime and anywhere"
 
-	# Navigation
-	[params.navigation]
-		brand = "Frontop Engineering Limited"
+  [params.feature]
+    enable = true
+    title = "Providing geotechnical engineering services in Ontario, Canada"
+    content = "Frontop provides multiple engineering services including: geotechnical instrumentation and monitoring, real-time noise and vibration monitoring, computer science and software developing engineering, precision surveying and construction layout, geotechnical engineering, as well as structural, civil work, electrical and mechanical (HVAC, plumbing and fire protection) design. We incorporate our wide range of knowledge and experience to ensure works of excellence and high quality, guaranteeing that the needs of our clients are satisfied.."
+    [params.feature.button]
+      caption = "View Projects"
+      url = "/work"
 
-		[params.navigation.links]
-			about     = "About"
-			services  = "Services"
-			portfolio = "Portfolio"
-			contact   = "Contact"
+  [params.call]
+    enable = true
+    title = "We design delightful digital experiences."
+    paragraph = "Read more about what we do and our philosophy of design. Judge for yourself The work and results we’ve achieved for other clients, and meet our highly experienced Team who just love to design."
 
-
-	# Hero section
-	[params.hero]
-		# To change the background of the hero section, replace the 'header.jpg' at './static/img' with your own.
-		slogan     = "Frontop Engineering"
-		subtitle   = "Be in the front, to provide top service"
-		buttonText = "Find out more"
-
-
-	# About section
-	[params.about]
-		headline    = "Established in 2005"
-		description = "Frontop has been consistently providing top quality service for over a decade, and is now one of the top engineering consulting firms in Ontario. We focus on geotechnical instrumentation and monitoring, with over 50 employees including Professional Engineers, Instrumentation and Monitoring specialists, Software Engineers and Noise and Vibration experts."
-		buttonText  = ""
-
-
-	# Service section
-	[params.services]
-		headline = "At your service"
-
-        [[params.services.list]]
-            icon = "fas fa-globe"
-            title = "Geotechnical Monitoring"
-            description = "Real time fully automated monitoring system with web based data management."
-
-        [[params.services.list]]
-						icon = "fas fa-bullhorn"
-						title = "Noise and Vibration Monitoring"
-						description = "Including attendant noise and vibration measuring."
-
-				[[params.services.list]]
-            icon = "fa-diamond"
-            title = "Material Testing"
-            description = ""
-
-        [[params.services.list]]
-            icon = "fas fa-tint"
-            title = "Hydrogeological Engineering"
-            description = ""
-
-				[[params.services.list]]
-            icon = "fab fa-envira"
-            title = "Environmental Engineering"
-            description = ""
-
-        [[params.services.list]]
-            icon = "fas fa-database"
-            title = "Engineering design"
-            description = ""
-
-
-    # Portfolio modals
-	[params.portfolio.modal]
-      client = "Client"
-      date = "Date"
-      category = "Category"
-      buttonText = "Close"
-
-  # Aside section
-	#[params.aside]
-  #	headline = "Download stuff below!"
-
-		#[params.aside.button]
-		#	text = ""
-		#	link = ""
-
-	# Contact section
-	[params.contact]
-		headline = "Let's Get In Touch!"
-		description = "Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!"
-		phone = "905-947-0900"
-		email = "info@frontop.ca"
-
-	# Google Maps section
-	#[params.location]
-	# 	latitude  = "43.827858"
-	# 	longitude = "-79.331241"
-	# 	maps_api_key = ""
+  [params.contact]
+    enable = true
+    title = "Drop us a note"
+    subtitle = "For any inquiries, questions or commendations, please get in touch!"
+    [params.contact.form]
+      name = "Your name"
+      email = "Your email"
+      subject = "Your subject"
+      message = "Your message"
+      button = "Send message"
+    [params.contact.box]
+      title = "Stop by for a visit"
+      address = "101 Amber Street, Unit 1, Markham, ON L3R 3B2"
+      email = "Email: info@frontop.ca"
+      phone = "Phone: (905) 947-0900"
+    [params.contact.gmaps]
+      title = "Directions to our office"

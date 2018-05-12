@@ -1,0 +1,21 @@
+enable: true
+title: Experience you can trust
+paragraph: ""
+
+numbers:
+  - icon: ion-ios-chatboxes-outline
+    counter: 2005
+    text: Year Established
+  - icon: briefcase
+    counter: 500
+    text: Projects completed
+  - icon: cash
+    counter: 12000000
+    text: Value of contracts executed
+
+people:
+  - text: >
+      I never asked for this.
+    image: img/testimonials/aj.jpg
+    name: Adam Jensen
+    role: Task Force 29
