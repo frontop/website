@@ -1,86 +1,302 @@
+# Site settings
 baseurl = "https://frontop.github.io/"
 languageCode = "en-us"
 title = "Frontop Engineering"
-theme = "airspace-hugo"
+theme = "hugo-agency-theme"
 
-[menu]
+# Enter your tracking code to enable Google Analytics
+googleAnalytics = ""
 
-  [[menu.header]]
-    weight = 2
-    name = "Work"
-    url = "/work"
-  [[menu.header]]
-    weight = 4
-    name = "Contact"
-    url = "/contact"
-
-  [[menu.footer]]
-    weight = 1
-    name = "About us"
-    url = "#"
-  [[menu.footer]]
-    weight = 2
-    name = "Contact us"
-    url = "/contact"
-  [[menu.footer]]
-    weight = 3
-    name = "How it works"
-    url = "#"
-
-# The site's parameters
 [params]
+  # You can use Markdown syntax for urls [text](//url.to/source) or
+  # most longer texts.
+  #
+  # All icons using Fontawesome's icon font. Look at fortawesome.github.io/Font-Awesome/icons/
+  # for more icons. The icons are represented by their corresponding
+  # CSS class.
 
-  # If you want to remove the copyright text you need a Themefisher license.
-  # This license is offered with a 50% discount for all Hugo users.
-  # For information see https://github.com/gohugoio/hugoThemes/issues/260
+  # To provide some metadata for search engines feel free to add a few
+  # information about you and your website.
+	name = "Frontop Engineering"
+	description = "Providing geotechnical engineering services in Ontario, Canada"
+  # email = "your@email.com"
 
-  date_format = "6 January 2006"
+  # Link custom assets relative to /static
+  custom_css = []
+  custom_js  = []
+  favicon    = "favicon.ico"
 
-  home = "Home"
+  # Possibility to disable external/additional fonts
+  # Exception: Fontawesome
+  disableFonts = false
 
-  [params.slider]
-    enable = true
+  # 404 error customization
+  [params.error404]
+    heading = "Page couldn't be found"
+    text = "Please visit [this page](/)"
+
+  # Optional piwik tracking
+  #[params.analytics.piwik]
+  #  URL = "https://stats.example.com"
+  #  ID = "42"
+  #  # Track all subdomains with "*.example.com"
+  #  domain = "www.example.com"
+  #  # Optional integrity check hash
+  #  hash = "sha512-RfeD0pacGTqy9m7U6PgehQfS4cc7SIt+e+P+H5e848kEvB/RW84CUGO3O4O3LNbxjevym6KPUZ8muPsMrI8WIw=="
+
+  # Navigation
+  [params.navigation]
+    brand = "Frontop Engineering Limited"
+    # Optional logo as brand stored in img/
+    #logo = "logo.png"
+    services = "Services"
+    portfolio = "Portfolio"
+    about = "About"
+    team = "Team"
+    contact = "Contact"
+
+    # Add custom links. Those can be pre- and postpended to the default menu above.
+    # Use the weight attribute to order your custom links. Uncomment the example
+    # below and replace the values with your own.
+
+    # prepended links
+    #[[menu.prepend]]
+    #  url = "http://gohugo.io"
+    #  name = "Hugo"
+    #  weight = 10
+
+    # postpended links
+    [[menu.postpend]]
+      url = "http://www.frontop.ca"
+      name = "Original website"
+      weight = 10
+
+
+  # Hero section
+  [params.hero]
+    # To change the background image of the hero, replace 'header-bg.jpg' in
+    # the 'static/img' folder.
     title = "Frontop Engineering"
-    subtitle = "Be in the front, to provide top service"
+    subtitle = "Be in the front<br>provide top service"
+    buttonText = "Read more"
 
-  [params.wrapper]
+
+  # Services section
+  [params.services]
     enable = true
-    title = "About Us"
-    italic = "Established in 2005"
-    paragraph = "Frontop has been consistently providing top quality service for over a decade, and is now one of the top engineering consulting firms in Ontario. We focus on geotechnical instrumentation and monitoring, with over 50 employees including Professional Engineers, Instrumentation and Monitoring specialists, Software Engineers and Noise and Vibration experts."
+    title = "Services"
+    subtitle = "Professional engineering services from a trusted partner"
 
-  [params.blog]
+    [[params.services.row]]
+
+    [[params.services.row.list]]
+      icon = "fas fa-globe"
+      title = "Geotechnical Monitoring"
+      description = "Real time fully automated monitoring system with web based data management."
+      url = "#"
+
+    [[params.services.row.list]]
+      icon = "fas fa-bullhorn"
+      title = "Noise and Vibration Monitoring"
+      description = "Including attendant noise and vibration measuring."
+      url = "#"
+
+    [[params.services.row.list]]
+      icon = "fa-diamond"
+      title = "Material Testing"
+      description = "How hard is that rock?"
+      url = "#"
+
+    [[params.services.row.list]]
+      icon = "fas fa-tint"
+      title = "Hydrogeological Engineering"
+      description = ""
+      url = "#"
+
+    [[params.services.row.list]]
+      icon = "fab fa-envira"
+      title = "Environmental Engineering"
+      description = ""
+      url = "#"
+
+    [[params.services.row.list]]
+      icon = "fas fa-database"
+      title = "Engineering design"
+      description = ""
+      url = "#"
+
+  # Portfolio section
+  [params.portfolio]
+    enable = true
+    # All projects defined in their own files. You can find example projects
+    # at 'exampleSite/data/projects'. Copy the 'projects' folder into the 'data' directory
+    # at the root of this Hugo site.
+    # For more informtion take a look at the README.
+    title = "Portfolio"
+    subtitle = "Active and completed projects"
+
+    [params.portfolio.modal]
+      client = "Client"
+      date = "Date"
+      category = "Category"
+      buttonText = "Close project"
+
+
+    # About section
+  [params.about]
+    enable = true
+    title = "About"
+    subtitle = "A timeline of our work"
+    endpoint = "Today!"
+
+    # Frontop has been consistently providing top quality service for over a decade, and is now one of the top engineering consulting firms in Ontario. We focus on geotechnical instrumentation and monitoring, with over 50 employees including Professional Engineers, Instrumentation and Monitoring specialists, Software Engineers and Noise and Vibration experts.
+
+    # The events will be listed from the top to the bottom.
+    # All images are stored under 'static/img/about'.
+    # Replace them with your own.
+    [[params.about.events]]
+      img = "1.png"
+      date = "2005"
+      title = "Established"
+      description = "We were established."
+
+    [[params.about.events]]
+      img = "2.jpg"
+      date = "March 2017"
+      title = "Training"
+      description = ""
+
+  # Team section
+  [params.team]
     enable = false
-    title = "Get The Latest On What We're doing"
-    subtitle = "Catch up with us, anytime and anywhere"
+    # Possibility to center items
+    #center = true
+    title = "Our amazing team"
+    subtitle = "Lorem ipsum dolor sit amet consectetur."
+    description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde."
 
-  [params.feature]
-    enable = true
-    title = "Providing geotechnical engineering services in Ontario, Canada"
-    content = "Frontop provides multiple engineering services including: geotechnical instrumentation and monitoring, real-time noise and vibration monitoring, computer science and software developing engineering, precision surveying and construction layout, geotechnical engineering, as well as structural, civil work, electrical and mechanical (HVAC, plumbing and fire protection) design. We incorporate our wide range of knowledge and experience to ensure works of excellence and high quality, guaranteeing that the needs of our clients are satisfied.."
-    [params.feature.button]
-      caption = "View Projects"
-      url = "/work"
+    # All team member's pictures are stored under 'static/img/team'.
+    # Replace them with your own too.
+    # Suggestion: Image size should be at least 360px*360px or the alignment might be affected.
+    [[params.team.members]]
+      img = "1.jpg"
+      name = ""
+      position = ""
+      reportsTo = ""
+      livesIn = "" # [Munich, Germany](#some-maps-url)
+      scope = [
+        "",
+        "",
+        ""
+      ]
+      # For bio markdown and even multiline strings are available.
+      bio = """
+      """
+      social = [
+        ["fa-twitter", "#"],
+        ["fa-facebook", "#"],
+        ["fa-linkedin", "#"]
+      ]
 
-  [params.call]
-    enable = true
-    title = "We design delightful digital experiences."
-    paragraph = "Read more about what we do and our philosophy of design. Judge for yourself The work and results we’ve achieved for other clients, and meet our highly experienced Team who just love to design."
+  # Client section
+    [params.clients_list]
+      enable = true
+      # Possibility to center items
+      #center = true
+      # Optional client title specifying the involvement
+      #title = "Our clients"
 
+      # All the clients' logos are stored under 'static/img/logos'.
+      # Replace them with your clients's logos.
+      # Suggestion: .svg in the size of 280px*80px looks good
+      [[params.clients]]
+        logo = "metrolinx.jpg"
+        link = "http://www.metrolinx.com"
+
+      [[params.clients]]
+        logo = "ttc.png"
+        link = "https://www.ttc.ca"
+
+  # Contact section
   [params.contact]
     enable = true
-    title = "Drop us a note"
-    subtitle = "For any inquiries, questions or commendations, please get in touch!"
-    [params.contact.form]
-      name = "Your name"
-      email = "Your email"
-      subject = "Your subject"
-      message = "Your message"
-      button = "Send message"
-    [params.contact.box]
-      title = "Stop by for a visit"
-      address = "101 Amber Street, Unit 1, Markham, ON L3R 3B2"
-      email = "Email: info@frontop.ca"
-      phone = "Phone: (905) 947-0900"
-    [params.contact.gmaps]
-      title = "Directions to our office"
+    title = "Contact us"
+    subtitle  = "For any inquiries or questions please get in touch!"
+    buttonText = "Send message"
+    # netlify = true
+
+    # Since this template is static, the contact form uses www.formspree.io as a
+    # proxy. The form makes a POST request to their servers to send the actual
+    # email. Visitors can send up to a 1000 emails each month for free.
+    #
+    # What you need to do for the setup?
+    #
+    # - set your email address under 'email' below
+    # - upload the generated site to your server
+    # - send a dummy email yourself to confirm your account
+    # - click the confirm link in the email from www.formspree.io
+    # - you're done. Happy mailing!
+
+    # It is possible to substitute formspring with other providers
+    # as an example the mailout plugin from caddy.
+    # Provide the post URL for the form and depending on the provider
+    # add some custom JS script to finish the implementation.
+    # postURL = "https://example.com/mailout/"
+
+    email = "info@frontop.ca"
+
+    # Success and error message overwrite for async contact form
+    #thanks = "Thank you for contacting us, we will be in touch."
+    #error = "Message could not be sent. Please contact us at info@frontop.ca instead."
+
+    [params.contact.captcha]
+      # sitekey = ""
+
+    # 'warning' defines error messages for invalid inputs
+    [params.contact.form.name]
+      text = "Your Name *"
+      warning = "Please enter your name."
+
+    [params.contact.form.email]
+      text = "Your Email *"
+      warning = "Please enter your email address."
+
+    [params.contact.form.phone]
+      text = "Your Phone *"
+      warning = "Please enter your phone number."
+
+    [params.contact.form.message]
+      text = "Your Message *"
+      warning = "Please enter a message."
+
+      # Add optional form fields to identify contact forms
+      #[[params.contact.form.hidden]]
+      #  name = "someID"
+      #  value = "example.com"
+      #
+      #[[params.contact.form.hidden]]
+      # Special values for name such as "page" and "site" will be autofilled
+      #  name = "page"
+
+  # Footer section
+  [params.footer]
+    enable = true
+    copyright = "Published under the Apache License 2.0."
+
+    [[params.footer.social]]
+      icon = "fa-facebook"
+      link = "#"
+      title = "Facebook"
+
+    [[params.footer.social]]
+      icon = "fa-linkedin"
+      link = "#"
+      title = "LinkedIn"
+
+    #[[params.footer.quicklinks]]
+    #  text = "Privacy Policy"
+    #  link = "#"
+
+    #[[params.footer.quicklinks]]
+    #  text = "Terms of Use"
+    #  link = "#"
