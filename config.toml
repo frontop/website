@@ -1,0 +1,117 @@
+baseurl = "https://www.frontop.ca/"
+languageCode = "en-us"
+title = "Frontop Engineering"
+theme = "hugo-creative-theme"
+googleAnalytics = ""
+
+[params]
+
+	# You can use Markdown syntax for urls [text](//url.to/source) for
+	# most longer texts.
+
+	# All icons using Fontawesome's icon font. Look at http://fontawesome.io/icons/
+	# for more icons. The icons are represented by their corresponding
+	# CSS class.
+
+	# All projects of the portfolio are defined in their own files.
+	# You can find example projects at 'exampleSite/data/projects'. Copy the 'projects'
+	# folder into the 'data' directory at the root of this Hugo site.
+	# For more information take a look at the README.
+
+	# To provide some metadata for search engines feel free to add some
+	# information about you and your website.
+	name = "Frontop Engineering"
+	description = "Providing geotechnical engineering services in Ontario, Canada"
+
+	# The path must be relative to the static folder
+	favicon = "favicon.ico"
+
+
+	# Navigation
+	[params.navigation]
+		brand = "Frontop Engineering Limited"
+
+		[params.navigation.links]
+			about     = "About"
+			services  = "Services"
+			portfolio = "Portfolio"
+			contact   = "Contact"
+
+
+	# Hero section
+	[params.hero]
+		# To change the background of the hero section, replace the 'header.jpg' at './static/img' with your own.
+		slogan     = "Frontop Engineering"
+		subtitle   = "Be in the front, to provide top service"
+		buttonText = "Find out more"
+
+
+	# About section
+	[params.about]
+		headline    = "Established in 2005"
+		description = "Frontop has been consistently providing top quality service for over a decade, and is now one of the top engineering consulting firms in Ontario. We focus on geotechnical instrumentation and monitoring, with over 50 employees including Professional Engineers, Instrumentation and Monitoring specialists, Software Engineers and Noise and Vibration experts."
+		buttonText  = ""
+
+
+	# Service section
+	[params.services]
+		headline = "At your service"
+
+        [[params.services.list]]
+            icon = "fas fa-globe"
+            title = "Geotechnical Monitoring"
+            description = "Real time fully automated monitoring system with web based data management."
+
+        [[params.services.list]]
+						icon = "fas fa-bullhorn"
+						title = "Noise and Vibration Monitoring"
+						description = "Including attendant noise and vibration measuring."
+
+				[[params.services.list]]
+            icon = "fa-diamond"
+            title = "Material Testing"
+            description = ""
+
+        [[params.services.list]]
+            icon = "fas fa-tint"
+            title = "Hydrogeological Engineering"
+            description = ""
+
+				[[params.services.list]]
+            icon = "fab fa-envira"
+            title = "Environmental Engineering"
+            description = ""
+
+        [[params.services.list]]
+            icon = "fas fa-database"
+            title = "Engineering design"
+            description = ""
+
+
+    # Portfolio modals
+	[params.portfolio.modal]
+      client = "Client"
+      date = "Date"
+      category = "Category"
+      buttonText = "Close"
+
+  # Aside section
+	#[params.aside]
+  #	headline = "Download stuff below!"
+
+		#[params.aside.button]
+		#	text = ""
+		#	link = ""
+
+	# Contact section
+	[params.contact]
+		headline = "Let's Get In Touch!"
+		description = "Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!"
+		phone = "905-947-0900"
+		email = "info@frontop.ca"
+
+	# Google Maps section
+	#[params.location]
+	# 	latitude  = "43.827858"
+	# 	longitude = "-79.331241"
+	# 	maps_api_key = ""
